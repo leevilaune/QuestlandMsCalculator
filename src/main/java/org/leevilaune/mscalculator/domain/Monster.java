@@ -25,4 +25,12 @@ public class Monster {
     public void setPoints(int points) {
         this.points = points;
     }
+
+    @Override
+    public String toString() {
+        return "Monster{" +
+                "name='" + name + '\'' +
+                ", points=" + points +
+                '}';
+    }
 }
