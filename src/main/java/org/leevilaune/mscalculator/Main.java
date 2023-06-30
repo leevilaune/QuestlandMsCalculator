@@ -1,12 +1,11 @@
 package org.leevilaune.mscalculator;
 
-import org.leevilaune.mscalculator.domain.Monster;
-import org.leevilaune.mscalculator.domain.Stage;
+import org.leevilaune.mscalculator.models.Monster;
+import org.leevilaune.mscalculator.models.Stage;
 import org.leevilaune.mscalculator.logic.DataLoader;
 import org.leevilaune.mscalculator.logic.StageManager;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static java.util.Collections.sort;
 

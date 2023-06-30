@@ -1,7 +1,7 @@
 package org.leevilaune.mscalculator.logic;
 
-import org.leevilaune.mscalculator.domain.Monster;
-import org.leevilaune.mscalculator.domain.Stage;
+import org.leevilaune.mscalculator.models.Monster;
+import org.leevilaune.mscalculator.models.Stage;
 
 import java.io.File;
 import java.util.ArrayList;

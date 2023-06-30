@@ -1,4 +1,4 @@
-package org.leevilaune.mscalculator.domain;
+package org.leevilaune.mscalculator.models;
 
 public class Monster {
 

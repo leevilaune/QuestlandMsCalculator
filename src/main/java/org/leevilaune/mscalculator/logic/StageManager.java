@@ -1,12 +1,10 @@
 package org.leevilaune.mscalculator.logic;
 
-import org.leevilaune.mscalculator.domain.Monster;
-import org.leevilaune.mscalculator.domain.Stage;
+import org.leevilaune.mscalculator.models.Monster;
+import org.leevilaune.mscalculator.models.Stage;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class StageManager {
 
@@ -27,6 +25,12 @@ public class StageManager {
         return stagesWith;
     }
 
+    /***
+     * Calculate points for stages
+     * @param stages - list of stages
+     * @param monsters - list of monsters
+     * @return list of stages with points calculated
+     */
     public List<Stage> calculatePointsForStages(List<Stage> stages, List<Monster> monsters){
         List<Stage> stageList = new ArrayList<>();
         for (Stage s : stages){
