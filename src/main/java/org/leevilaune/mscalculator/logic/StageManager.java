@@ -1,5 +1,6 @@
 package org.leevilaune.mscalculator.logic;
 
+import org.leevilaune.mscalculator.models.CampaignStage;
 import org.leevilaune.mscalculator.models.Monster;
 import org.leevilaune.mscalculator.models.Stage;
 
@@ -47,5 +48,9 @@ public class StageManager {
             }
         }
         return stageList;
+    }
+
+    public CampaignStage getStage(int id, List<CampaignStage> stages){
+        return stages.stream().filter(stage -> stage.getId() == id).toList().get(0);
     }
 }

@@ -1,5 +1,6 @@
 package org.leevilaune.mscalculator.logic;
 
+import org.leevilaune.mscalculator.models.CampaignStage;
 import org.leevilaune.mscalculator.models.Monster;
 import org.leevilaune.mscalculator.models.Stage;
 
@@ -71,5 +72,34 @@ public class DataLoader {
             e.printStackTrace();
         }
         return rows;
+    }
+
+    /***
+     * Returns a list of campaign stages
+     * @param fileName - path of the csv that contains campaign mapping
+     * @return
+     */
+    public List<CampaignStage> loadStages(String fileName){
+        List<CampaignStage> stages = null;
+        Scanner scanner;
+        try{
+            scanner = new Scanner(new File(fileName));
+            stages = new ArrayList<>();
+            scanner.nextLine();
+            String currentId = "1";
+            while(scanner.hasNextLine()){
+                String line = scanner.nextLine();
+                String[] parts = line.split(",");
+                CampaignStage s = new CampaignStage(Integer.parseInt(parts[0]),parts[1],parts[2],Integer.parseInt(parts[3]),Integer.parseInt(parts[4]),parts[5]);
+
+                stages.add(s);
+            }
+
+        }catch(Exception e){
+            //TODO: custom logger
+            System.out.println("Something went wrong in DataLoader - loadCampaignData");
+            e.printStackTrace();
+        }
+        return stages;
     }
 }
